@@ -59,7 +59,6 @@ module MatrixDdLppT16
        for i in 0...@filas
          cont += @pos[i].size
        end
-
        res = total - cont
        res.to_f/total.to_f
      end
@@ -82,7 +81,7 @@ module MatrixDdLppT16
           c.set(i, j, get(i,j) + other.get(i,j))
         end
       end
-
+      
       if(c.num_nulos > 0.6)
         c = Matriz_Dispersa.copy(c)
       end
@@ -97,7 +96,7 @@ module MatrixDdLppT16
           c.set(i, j, get(i,j) - other.get(i,j))
         end
       end
-
+    
       if(c.num_nulos > 0.6)
         c = Matriz_Dispersa.copy(c)
       end

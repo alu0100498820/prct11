@@ -1,4 +1,5 @@
 require "bundler/gem_tasks"
+require 'rdoc/task'
 
 $:.unshift File.dirname(__FILE__) + 'lib'
 $:.unshift './lib', './spec'
@@ -17,4 +18,9 @@ end
 desc "Pruebas unitarias de las clases Matriz_Densa y Matriz_Dispersa (hija)"
 task :tc do
         sh "ruby -I. test/test_matriz.rb --format documentation"
+end
+
+Rake::RDocTask.new do |rd|
+    rd.main = "README.md"
+    rd.rdoc_files.include("README.md", "lib/**/*.rb")
 end

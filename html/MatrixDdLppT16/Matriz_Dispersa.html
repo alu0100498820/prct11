@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MatrixDdLppT16::Matriz_Dispersa - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/matrix_dd_lpp_t16/matriz_dispersa.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Matriz.html">MatrixDdLppT16::Matriz</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-copy">::copy</a>
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-get">#get</a>
+    
+    <li ><a href="#method-i-new_initialize">#new_initialize</a>
+    
+    <li ><a href="#method-i-num_nulos">#num_nulos</a>
+    
+    <li ><a href="#method-i-set">#set</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MatrixDdLppT16.html">MatrixDdLppT16</a>
+  
+    <li><a href="../MatrixDdLppT16/Fraccion.html">MatrixDdLppT16::Fraccion</a>
+  
+    <li><a href="../MatrixDdLppT16/Matriz.html">MatrixDdLppT16::Matriz</a>
+  
+    <li><a href="../MatrixDdLppT16/Matriz_Densa.html">MatrixDdLppT16::Matriz_Densa</a>
+  
+    <li><a href="../MatrixDdLppT16/Matriz_Dispersa.html">MatrixDdLppT16::Matriz_Dispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MatrixDdLppT16::Matriz_Dispersa</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="Matriz.html">Matriz</a> Dispersa que hereda de la clase <a
+href="Matriz.html">Matriz</a></p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-copy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copy</span><span
+            class="method-args">(matriz)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creacion matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="copy-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">matriz</span>)
+  <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">filas</span>, <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">columnas</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">filas</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">columnas</span>
+      <span class="ruby-identifier">val</span> = <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+      <span class="ruby-keyword">if</span>(<span class="ruby-identifier">val</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+        <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">pos</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">val</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- copy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- copy-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(filas, columnas)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Constructor de la clase <a href="Matriz.html">Matriz</a> Dispersa</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matriz.html#method-c-new">MatrixDdLppT16::Matriz.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">filas</span>, <span class="ruby-identifier">columnas</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">new_initialize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo Multiplicacion (Multiplicacion de dos matrices)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 108</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>)
+  <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+     <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span> 
+
+<span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">num_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo Suma (Suma de dos matrices)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 78</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-ivar">@columnas</span>)
+  <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">num_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+     <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo Resta (Resta de dos matrices)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-ivar">@columnas</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@columnas</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">num_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get</span><span
+            class="method-args">(i, j)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo que devuelve el valor del elemento en la posision i,j</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>)
+   <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+     <span class="ruby-keyword">return</span> <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+   <span class="ruby-keyword">else</span>
+     <span class="ruby-keyword">return</span> <span class="ruby-value">0</span>
+   <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get-method -->
+
+    
+      <div id="method-i-new_initialize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new_initialize</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new_initialize-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new_initialize</span>
+  <span class="ruby-ivar">@pos</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+    <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>] = {} 
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new_initialize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new_initialize-method -->
+
+    
+      <div id="method-i-num_nulos" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">num_nulos</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Porcentaje de numeros Nulos</p>
+          
+          
+
+          
+          <div class="method-source-code" id="num_nulos-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">num_nulos</span>
+   <span class="ruby-identifier">total</span> = <span class="ruby-ivar">@filas</span><span class="ruby-operator">*</span><span class="ruby-ivar">@columnas</span>
+   <span class="ruby-identifier">cont</span> = <span class="ruby-value">0</span>
+
+   <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+     <span class="ruby-identifier">cont</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">size</span>
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-identifier">res</span> = <span class="ruby-identifier">total</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cont</span>
+   <span class="ruby-identifier">res</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">total</span>.<span class="ruby-identifier">to_f</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- num_nulos-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- num_nulos-method -->
+
+    
+      <div id="method-i-set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set</span><span
+            class="method-args">(i, j, val)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo que modifica el valor del elemento en la posicion i,j</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+    <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">j</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">val</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Matriz_Dispersa.html#method-i-to_s">#to_s</a> (Convierte los
+numeros en una cadena)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;Fila #{i}: &quot;</span>
+    <span class="ruby-ivar">@pos</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;#{k}=&gt;#{v} &quot;</span>}
+    <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
