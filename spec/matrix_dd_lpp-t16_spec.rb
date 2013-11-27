@@ -30,6 +30,7 @@ describe MatrixDdLppT16::Matriz_Densa do
         @m5.set(1,0,2)
 	@m5.set(1,1,3)
        
+	
 
     end
 
@@ -67,8 +68,6 @@ describe MatrixDdLppT16::Matriz_Densa do
                 @m6.set(1,1,6)
 
                 (@m4+@m5).to_s.should eq(@m6.to_s)
-
-
 	end
 
         it " # Restar dos matrices " do
@@ -107,15 +106,14 @@ describe MatrixDdLppT16::Matriz_Dispersa do
 
         @m1.set(0,0,0)
         @m1.set(0,1,0)
-
         @m1.set(1,0,1)
         @m1.set(1,1,3)
-
         @m1.set(2,0,0)
         @m1.set(2,1,0)
 
         @md1 = MatrixDdLppT16::Matriz_Dispersa.copy(@m1)
         @md2 = MatrixDdLppT16::Matriz_Dispersa.new(3,2)
+
     end
 
     describe " # Almacenamiento de matrices. " do
@@ -123,6 +121,18 @@ describe MatrixDdLppT16::Matriz_Dispersa do
         it " # Debe poderse crear matrices dispersas vacias o a partir de matrices densas." do
             MatrixDdLppT16::Matriz_Dispersa.new(5, 5)
             MatrixDdLppT16::Matriz_Dispersa.copy(@m1)
+        end
+	
+	 it " # Modificando los elementos de la matriz dispersa." do
+            @md2.set(0,1,1)
+            @md2.set(1,0,1)
+            @md2.set(1,1,1)
+            @md2.set(2,0,1)
+
+            @md1.set(1,1,10)
+            @md1.set(1,0,45)
+            @md1.get(1,1).should == 10
+            @md1.get(1,0).should == 45
         end
     end
 
@@ -132,10 +142,8 @@ describe MatrixDdLppT16::Matriz_Dispersa do
 
                 @md3.set(0,0,0)
                 @md3.set(0,1,0)
-
                 @md3.set(1,0,1)
                 @md3.set(1,1,3)
-
                 @md3.set(2,0,0)
                 @md3.set(2,1,0)
 
@@ -143,12 +151,11 @@ describe MatrixDdLppT16::Matriz_Dispersa do
         end
         it " # Restar dos matrices " do
                 @md3 = MatrixDdLppT16::Matriz_Dispersa.new(3,2)
+
                 @md3.set(0,0,0)
                 @md3.set(0,1,0)
-
                 @md3.set(1,0,-1)
                 @md3.set(1,1,-3)
-
                 @md3.set(2,0,0)
                 @md3.set(2,1,0)
 
@@ -175,7 +182,16 @@ describe MatrixDdLppT16::Matriz_Dispersa do
 
                 (@md1*@md4).to_s.should eq(@md3.to_s)
         end
+    end
+    
 
+    describe " # max y min " do
+        it " # Maximo de una matriz dispersa" do
+                @md1.max.should == 3
+        end
+        it " # Minimo de una matriz dispersa" do
+                @m1.min.should == 0
+        end
     end
 
 

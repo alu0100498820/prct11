@@ -92,8 +92,8 @@ module MatrixDdLppT16
     #Metodo Resta (Resta de dos matrices)
     def -(other)
       c = Matriz_Densa.new(@filas, @columnas)
-      for i in 0...@filas
-        for j in 0...@columnas
+      0.upto(@filas-1) do |i|
+        0.upto(@columnas-1) do |j|
           c.set(i, j, get(i,j) - other.get(i,j))
         end
       end
@@ -107,18 +107,45 @@ module MatrixDdLppT16
     #Metodo Multiplicacion (Multiplicacion de dos matrices)
      def *(other)
       c = Matriz_Densa.new(@filas, other.columnas)
-      0.upto(@filas-1) do |i|
-        0.upto(other.columnas-1) do |j|
-         0.upto(@columnas-1) do |k|
-          c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
-        end
-      end
-    end 
+      	0.upto(@filas-1) do |i|
+        	0.upto(other.columnas-1) do |j|
+         		0.upto(@columnas-1) do |k|
+          			c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
+         		end
+        	end
+      	end 
 
-    if(c.num_nulos > 0.6)
-      c = Matriz_Dispersa.copy(c)
-    end
-    c
+      if(c.num_nulos > 0.6)
+        c = Matriz_Dispersa.copy(c)
+      end
+     c
+     end
+
+
+    #Metodo Minimo de una matriz dispersa
+     def minimo      
+                min = get(0,0)               
+                for i in 0...@filas
+                 	for j in 0...@columnas
+                        	if(get(i,j) < min)      
+                                	min = get(i,j)        
+                        	end
+                 	end
+		end
+                min       
+     end
+     
+     #Metodo Maximo de una matriz dispersa
+     def max
+        max = get(0,0)
+        for i in 0...@filas
+                for j in 0...@columnas
+                        if (get(i,j) > max)
+                                max = get(i,j)
+                        end
+                end
+        end
+        max
     end
 
   end

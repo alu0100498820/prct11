@@ -1,8 +1,8 @@
-Wed, 27 Nov 2013 11:54:40 +0000
-README.md	Mon, 25 Nov 2013 16:01:04 +0000
-lib/matrix_dd_lpp_t16.rb	Mon, 25 Nov 2013 16:01:04 +0000
-lib/matrix_dd_lpp_t16/fraccion.rb	Wed, 27 Nov 2013 10:59:46 +0000
-lib/matrix_dd_lpp_t16/matriz.rb	Tue, 26 Nov 2013 16:40:30 +0000
-lib/matrix_dd_lpp_t16/matriz_densa.rb	Wed, 27 Nov 2013 11:15:43 +0000
-lib/matrix_dd_lpp_t16/matriz_dispersa.rb	Wed, 27 Nov 2013 11:17:21 +0000
-lib/matrix_dd_lpp_t16/version.rb	Mon, 25 Nov 2013 16:01:04 +0000
+Wed, 27 Nov 2013 18:30:43 +0000
+README.md	Wed, 27 Nov 2013 18:27:34 +0000
+lib/matrix_dd_lpp_t16.rb	Wed, 27 Nov 2013 18:27:34 +0000
+lib/matrix_dd_lpp_t16/fraccion.rb	Wed, 27 Nov 2013 17:47:40 +0000
+lib/matrix_dd_lpp_t16/matriz.rb	Wed, 27 Nov 2013 18:27:34 +0000
+lib/matrix_dd_lpp_t16/matriz_densa.rb	Wed, 27 Nov 2013 18:27:34 +0000
+lib/matrix_dd_lpp_t16/matriz_dispersa.rb	Wed, 27 Nov 2013 17:39:21 +0000
+lib/matrix_dd_lpp_t16/version.rb	Wed, 27 Nov 2013 18:27:34 +0000

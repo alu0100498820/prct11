@@ -43,7 +43,9 @@ module MatrixDdLppT16
 	  end
 
   	  #Multiplicacion de fracciones
-
+	  def *(other)
+                return Fraccion.new(@num * other.num, @dem * other.dem)
+          end
 
 
 	end

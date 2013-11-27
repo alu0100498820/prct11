@@ -85,6 +85,10 @@
     
     <li ><a href="#method-i-get">#get</a>
     
+    <li ><a href="#method-i-max">#max</a>
+    
+    <li ><a href="#method-i-minimo">#minimo</a>
+    
     <li ><a href="#method-i-new_initialize">#new_initialize</a>
     
     <li ><a href="#method-i-num_nulos">#num_nulos</a>
@@ -265,19 +269,19 @@ href="Matriz.html">Matriz</a></p>
           
           <div class="method-source-code" id="2A-source">
             <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 108</span>
- <span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
-  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>)
-  <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
-    <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
-     <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+ <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>)
+   <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+           <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                   <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+                           <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+                   <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">end</span> 
 
-<span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">num_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
-  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
-<span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">num_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+   <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+ <span class="ruby-keyword">end</span>
 <span class="ruby-identifier">c</span>
 <span class="ruby-keyword">end</span></pre>
           </div><!-- 2A-source -->
@@ -355,8 +359,8 @@ href="Matriz.html">Matriz</a></p>
             <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 93</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
   <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-ivar">@columnas</span>)
-  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
-    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@columnas</span>
+  <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
       <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
@@ -411,6 +415,88 @@ href="Matriz.html">Matriz</a></p>
 
         
       </div><!-- get-method -->
+
+    
+      <div id="method-i-max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">max</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo Maximo de una matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 139</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">max</span> = <span class="ruby-identifier">get</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+            <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@columnas</span>
+                    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max</span>)
+                            <span class="ruby-identifier">max</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+                    <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- max-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- max-method -->
+
+    
+      <div id="method-i-minimo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">minimo</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo Minimo de una matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="minimo-source">
+            <pre><span class="ruby-comment"># File lib/matrix_dd_lpp_t16/matriz_dispersa.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">minimo</span>      
+           <span class="ruby-identifier">min</span> = <span class="ruby-identifier">get</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)               
+           <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@filas</span>
+                   <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@columnas</span>
+                           <span class="ruby-keyword">if</span>(<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">min</span>)      
+                                   <span class="ruby-identifier">min</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)        
+                           <span class="ruby-keyword">end</span>
+                   <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">end</span>
+           <span class="ruby-identifier">min</span>       
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- minimo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- minimo-method -->
 
     
       <div id="method-i-new_initialize" class="method-detail ">

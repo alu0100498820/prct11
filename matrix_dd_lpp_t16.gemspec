@@ -6,8 +6,8 @@ require 'matrix_dd_lpp_t16/version'
 Gem::Specification.new do |spec|
   spec.name          = "matrix_dd_lpp_t16"
   spec.version       = MatrixDdLppT16::VERSION
-  spec.authors       = ["Borja Barrera Villagrasa"]
-  spec.email         = ["alu0100498820@ull.edu.es"]
+  spec.authors       = ["Borja Barrera Villagrasa","Ayose Jesús Castillo Barroso"]
+  spec.email         = ["alu0100498820@ull.edu.es","alu0100600810@ull.edu.es"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
