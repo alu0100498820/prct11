@@ -1,13 +1,13 @@
 require "./lib/matrix_dd_lpp_t16.rb"
-
+include MatrixDdLppT16
 
 describe MatrixDdLppT16::Matriz_Densa do
  
     before :each do
         @m1 = MatrixDdLppT16::Matriz_Densa.new(2,2)
         @m2 = MatrixDdLppT16::Matriz_Densa.new(2,2)
-	@m4 = MatrixDdLppT16::Fraccion.new(2,2)
-
+	@m4 = MatrixDdLppT16::Matriz_Densa.new(2,2)
+	@m5 = MatrixDdLppT16::Matriz_Densa.new(2,2)
 	
 
         @m1.set(0,0,1)
@@ -20,12 +20,12 @@ describe MatrixDdLppT16::Matriz_Densa do
         @m2.set(1,0,3)
         @m2.set(1,1,4)
 
-	@m4.set(0,0,(1,1))
+	@m4.set(0,0,Fraccion.new(1,1))
 	@m4.set(0,1,1)
         @m4.set(1,0,2)
 	@m4.set(1,1,3)
 
-	@m5.set(0,0,(1,1))
+	@m5.set(0,0,Fraccion.new(1,1))
 	@m5.set(0,1,1)
         @m5.set(1,0,2)
 	@m5.set(1,1,3)
@@ -61,7 +61,7 @@ describe MatrixDdLppT16::Matriz_Densa do
 	it "#sumar matrices de fracciones." do
 		
 		@m6 = MatrixDdLppT16::Matriz_Densa.new(2,2)
-                @m6.set(0,0,2)
+                @m6.set(0,0,Fraccion.new(2,1))
                 @m6.set(0,1,2)
                 @m6.set(1,0,4)
                 @m6.set(1,1,6)
