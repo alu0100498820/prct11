@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+require 'matrix_dd_lpp_t16'
